@@ -1,0 +1,24 @@
+# Modified from https://en.wikipedia.org/wiki/YAML
+
+# sequencer protocols for Laser eye surgery
+---
+step1:  &id001                  # defines anchor label &id001
+  instrument:      Lasik 2000
+  pulseEnergy:     5.4
+  pulseDuration:   12
+  repetition:      1000
+  spotSize:        1mm
+
+step2: &id002
+  instrument:      Lasik 2000
+  pulseEnergy:     5.0
+  pulseDuration:   10
+  repetition:      500
+  spotSize:        2mm
+
+step3: *id001                   # refers to the first step (with anchor &id001)
+step4: *id002                   # refers to the second step
+step5:
+  <<: *id001
+  spotSize: 2mm                # redefines just this key, refers rest from &id001
+step6: *id002

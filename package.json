@@ -1,0 +1,41 @@
+{
+  "name": "nixconfig-yaml",
+  "version": "1.0.0",
+  "description": "A yaml loader for the nixconfig module",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js",
+    "test-ci": "tap --cov test.js",
+    "lint": "standard | snazzy",
+    "lint-ci": "standard"
+  },
+  "precommit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jsumners/nixconfig-yaml.git"
+  },
+  "keywords": [
+    "nixconfig",
+    "config",
+    "yaml"
+  ],
+  "author": "James Sumners <james.sumners@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsumners/nixconfig-yaml/issues"
+  },
+  "homepage": "https://github.com/jsumners/nixconfig-yaml#readme",
+  "devDependencies": {
+    "nixconfig": "^1.1.0",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
+    "tap": "^11.0.1"
+  },
+  "dependencies": {
+    "js-yaml": "^3.10.0"
+  }
+}
